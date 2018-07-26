@@ -1,0 +1,25 @@
+
+{
+    "agendamentoApp": {
+        "planoDeSaude" : {
+            "home": {
+                "title": "Plano De Saudes",
+                "createLabel": "Crear nuevo Plano De Saude",
+                "createOrEditLabel": "Crear o editar Plano De Saude"
+            },
+            "created": "Un nuevo Plano De Saude ha sido creado con el identificador {{ param }}",
+            "updated": "Un Plano De Saude ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Plano De Saude ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Plano De Saude {{ id }}?"
+            },
+            "detail": {
+                "title": "Plano De Saude"
+            },
+            "nomePlano": "Nome Plano",
+            "cnpj": "Cnpj",
+            "planoDeSaude": "Plano De Saude",
+            "planoDeSaude": "Plano De Saude"
+        }
+    }
+}

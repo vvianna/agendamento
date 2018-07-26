@@ -1,0 +1,25 @@
+
+{
+    "agendamentoApp": {
+        "medico" : {
+            "home": {
+                "title": "Medicos",
+                "createLabel": "Criar novo Medico",
+                "createOrEditLabel": "Criar ou editar Medico"
+            },
+            "created": "Um novo Medico foi criado com o identificador {{ param }}",
+            "updated": "Um Medico foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Medico foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Medico {{ id }}?"
+            },
+            "detail": {
+                "title": "Medico"
+            },
+            "nome": "Nome",
+            "crm": "Crm",
+            "medico": "Medico",
+            "medico": "Medico"
+        }
+    }
+}
