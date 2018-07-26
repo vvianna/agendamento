@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Especialidade.
+    -->
+    <changeSet id="20180726145516-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="especialidades_id"
+                                 baseTableName="especialidade_especialidade"
+                                 constraintName="fk_especialidade_especialidade_especialidades_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="especialidade"/>
+        <addForeignKeyConstraint baseColumnNames="especialidades_id"
+                                 baseTableName="especialidade_especialidade"
+                                 constraintName="fk_especialidade_especialidade_especialidades_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="medico"/>
+        
+        <addForeignKeyConstraint baseColumnNames="especialidades_id"
+                                 baseTableName="especialidade_especialidade"
+                                 constraintName="fk_especialidade_especialidade_especialidades_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="especialidade"/>
+        <addForeignKeyConstraint baseColumnNames="especialidades_id"
+                                 baseTableName="especialidade_especialidade"
+                                 constraintName="fk_especialidade_especialidade_especialidades_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plano_de_saude"/>
+        
+    </changeSet>
+</databaseChangeLog>

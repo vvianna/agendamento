@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PlanoDeSaude.
+    -->
+    <changeSet id="20180726145515-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="plano_de_saudes_id"
+                                 baseTableName="plano_de_saude_plano_de_saude"
+                                 constraintName="fk_plano_de_saude_plano_de_saude_plano_de_saudes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plano_de_saude"/>
+        <addForeignKeyConstraint baseColumnNames="plano_de_saudes_id"
+                                 baseTableName="plano_de_saude_plano_de_saude"
+                                 constraintName="fk_plano_de_saude_plano_de_saude_plano_de_saudes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="medico"/>
+        
+        <addForeignKeyConstraint baseColumnNames="plano_de_saudes_id"
+                                 baseTableName="plano_de_saude_plano_de_saude"
+                                 constraintName="fk_plano_de_saude_plano_de_saude_plano_de_saudes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plano_de_saude"/>
+        <addForeignKeyConstraint baseColumnNames="plano_de_saudes_id"
+                                 baseTableName="plano_de_saude_plano_de_saude"
+                                 constraintName="fk_plano_de_saude_plano_de_saude_plano_de_saudes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="especialidade"/>
+        
+    </changeSet>
+</databaseChangeLog>

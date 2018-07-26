@@ -41,6 +41,12 @@ public class CacheConfiguration {
             cm.createCache(br.com.jvmsistemas.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.jvmsistemas.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.jvmsistemas.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.PlanoDeSaude.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.PlanoDeSaude.class.getName() + ".planoDeSaudes", jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.Especialidade.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.Especialidade.class.getName() + ".especialidades", jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.Medico.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.jvmsistemas.domain.Medico.class.getName() + ".medicos", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

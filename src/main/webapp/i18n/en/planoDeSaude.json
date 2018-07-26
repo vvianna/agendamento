@@ -1,0 +1,25 @@
+
+{
+    "agendamentoApp": {
+        "planoDeSaude" : {
+            "home": {
+                "title": "Plano De Saudes",
+                "createLabel": "Create a new Plano De Saude",
+                "createOrEditLabel": "Create or edit a Plano De Saude"
+            },
+            "created": "A new Plano De Saude is created with identifier {{ param }}",
+            "updated": "A Plano De Saude is updated with identifier {{ param }}",
+            "deleted": "A Plano De Saude is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Plano De Saude {{ id }}?"
+            },
+            "detail": {
+                "title": "Plano De Saude"
+            },
+            "nomePlano": "Nome Plano",
+            "cnpj": "Cnpj",
+            "planoDeSaude": "Plano De Saude",
+            "planoDeSaude": "Plano De Saude"
+        }
+    }
+}

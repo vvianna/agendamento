@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-medico-heading" jhiTranslate="agendamentoApp.medico.home.createOrEditLabel">Create or edit a Medico</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!medico.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="medico.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="agendamentoApp.medico.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                        [(ngModel)]="medico.nome" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="agendamentoApp.medico.crm" for="field_crm">Crm</label>
+                    <input type="text" class="form-control" name="crm" id="field_crm"
+                        [(ngModel)]="medico.crm" />
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="agendamentoApp.medico.medico" for="field_medico">Medico</label>
+                    <select class="form-control" id="field_medico" multiple name="medico" [(ngModel)]="medico.medicos">
+                        <option [ngValue]="getSelected(medico.medicos, especialidadeOption)" *ngFor="let especialidadeOption of especialidades; trackBy: trackEspecialidadeById">{{especialidadeOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label jhiTranslate="agendamentoApp.medico.medico" for="field_medico">Medico</label>
+                    <select class="form-control" id="field_medico" multiple name="medico" [(ngModel)]="medico.medicos">
+                        <option [ngValue]="getSelected(medico.medicos, planoDeSaudeOption)" *ngFor="let planoDeSaudeOption of planodesaudes; trackBy: trackPlanoDeSaudeById">{{planoDeSaudeOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
