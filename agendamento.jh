@@ -1,0 +1,29 @@
+enum Pagamento {
+	DINHEIRO, PLANO
+}
+entity PlanoDeSaude {
+	nomePlano String,
+    cnpj Long,
+}
+entity Especialidade {
+	nomeEspecialidade String,
+    
+}
+entity Medico {
+	nome String,
+    crm String,
+}
+relationship ManyToMany {
+	Medico to Especialidade,
+    Medico to PlanoDeSaude,
+    Especialidade to Medico,
+    Especialidade to PlanoDeSaude,
+    PlanoDeSaude to Medico,
+    PlanoDeSaude to Especialidade
+}
+relationship OneToMany {
+	Pagamento to PlanoDeSaude
+}
+
+// Set pagination options
+paginate PlanoDeSaude, Medico, Especialidade with pagination
